@@ -9,7 +9,17 @@ import * as pages from './pages';
 
 import 'mdb-ui-kit/css/mdb.min.css';
 
-void Aurelia.register(RouterConfiguration.customize({ useUrlFragmentHash: false, useDirectRouting: true, useHref: false }))
+void Aurelia.register(
+  RouterConfiguration.customize({
+    useUrlFragmentHash: false,
+    useDirectRouting: true,
+    useHref: false,
+    basePath: '/',
+    title: {
+      appTitle: '${componentTitles}${appTitleSeparator}DevSquad',
+    },
+  }),
+)
   .register(pages, elements)
   .app(App)
   .start();
