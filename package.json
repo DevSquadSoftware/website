@@ -38,6 +38,7 @@
     "typescript": "^4.9.4"
   },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "lint:js": "eslint src test --ext .js,.ts",
     "lint:css": "sass-lint -c .sass-lint.yml \"src/**/*.scss\"",
     "lint:html": "htmlhint -c .htmlhintrc src",
