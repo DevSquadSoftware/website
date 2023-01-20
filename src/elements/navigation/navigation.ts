@@ -19,7 +19,7 @@ export class Navigation implements ICustomElementViewModel {
 
   get classes() {
     return {
-      'fixed-top': this.route === '/',
+      'fixed-top': this.route === '/' || this.route === '/home',
       'navbar-scroll': this.route === '/',
     };
   }

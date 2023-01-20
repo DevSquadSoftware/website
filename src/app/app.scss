@@ -9,3 +9,10 @@ h1 {
 .modal.show {
   display: block;
 }
+
+html,
+body,
+app {
+  height: 100vh;
+  min-height: 100%;
+}
