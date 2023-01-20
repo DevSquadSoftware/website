@@ -10,7 +10,9 @@
   "dependencies": {
     "@aurelia/router": "dev",
     "aurelia": "dev",
-    "mdb-ui-kit": "git+https://oauth2:dzz1MomfYm3KdPFWkTyN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-advanced"
+    "mdb-ui-kit": "git+https://oauth2:dzz1MomfYm3KdPFWkTyN@git.mdbootstrap.com/mdb/standard/mdb-ui-kit-pro-advanced",
+    "detect-autofill": "^1.1.4",
+    "@popperjs/core": "^2.11.6"
   },
   "devDependencies": {
     "@aurelia/parcel-transformer": "dev",

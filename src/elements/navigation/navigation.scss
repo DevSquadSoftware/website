@@ -1,2 +1,19 @@
-#navigation {
+navigation {
+    nav:not(.fixed-top) {
+        .btn {
+            background-color: #000 !important;
+        }
+    }
+
+    .fixed-top.navbar-scrolled {
+        .btn {
+            background-color: #000 !important;
+        }
+
+        .navbar-brand,
+        .nav-link,
+        .fa-bars {
+            color: #000;
+        }
+    }
 }

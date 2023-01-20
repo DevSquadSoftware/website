@@ -12,3 +12,5 @@ declare module '*.html' {
 
 declare module '*.css';
 declare module '*.scss';
+
+declare module 'mdb-ui-kit/src/mdb/js/*';

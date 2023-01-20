@@ -1,4 +1,4 @@
+export { FormInput } from './form-input/form-input';
 export { MainFooter } from './main-footer/main-footer';
-export { MainNav } from './main-nav/main-nav';
 export { Navigation } from './navigation/navigation';
 export { QuoteModal } from './quote-modal/quote-modal';
