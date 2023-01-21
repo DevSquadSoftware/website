@@ -15,7 +15,8 @@
       </div>
     </div>
     <div class="row">
-      <form name="contact" class="col-md-6 m-auto text-end" netlify novalidate autocomplete="off">
+      <form submit.trigger="handleSubmit" name="contact" class="col-md-6 m-auto text-end" novalidate autocomplete="off">
+        <input type="hidden" name="form-name" value="contact" />
         <form-input name="name" class="my-3" label="Name" type="text"></form-input>
         <form-input name="email" class="my-3" label="Email Address" type="text"></form-input>
         <form-input name="subject" class="my-3" label="Subject" type="text"></form-input>
