@@ -5,6 +5,7 @@ import { encode } from '../../commonts';
 import './contact.scss';
 
 import template from 'bundle-text:./contact.html';
+import 'url:./contact.html';
 @customElement({ name: 'contact', template })
 export class ContactUs implements ICustomElementViewModel {
   constructor() {
