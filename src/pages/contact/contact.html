@@ -15,12 +15,13 @@
       </div>
     </div>
     <div class="row">
-      <form submit.trigger="handleSubmit" name="contact" class="col-md-6 m-auto text-end" novalidate autocomplete="off">
-        <input type="hidden" name="form-name" value="contact" />
+      <form class="col-md-6 m-auto text-end" novalidate autocomplete="off" name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" netlify-honeypot="bot-field">
+        <input hidden name="bot-field" />
         <form-input name="name" class="my-3" label="Name" type="text"></form-input>
         <form-input name="email" class="my-3" label="Email Address" type="text"></form-input>
         <form-input name="subject" class="my-3" label="Subject" type="text"></form-input>
         <form-input name="message" class="my-3" label="Message" lines="5" multiline.bind="true" type="text"></form-input>
+        <div data-netlify-recaptcha="true"></div>
 
         <button type="submit" class="btn btn-outline-dark btn-lg mb-4">Send</button>
       </form>
