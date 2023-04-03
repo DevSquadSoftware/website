@@ -1,5 +1,5 @@
 <div ref="formDiv" class="form-outline">
-  <input if.bind="!multiline" class="form-control" id.bind="id || name" ...$attrs value.bind="value" />
-  <textarea class="form-control" id.bind="id || name" else ...$attrs value.bind="value"></textarea>
+  <input if.bind="!multiline" class="form-control" name.bind="name" id.bind="id || name" ...$attrs value.bind="value" />
+  <textarea class="form-control" id.bind="id || name" name.bind="name" else ...$attrs value.bind="value"></textarea>
   <label class="form-label" for.bind="id || name" if.bind="label">${label}</label>
 </div>

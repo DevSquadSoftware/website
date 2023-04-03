@@ -23,7 +23,9 @@ export class Navigation implements ICustomElementViewModel {
     };
   }
 
-  attaching() {
+  attached() {
+    if (!this.nav) return;
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
     new Navbar(this.nav).init();
   }
 }
