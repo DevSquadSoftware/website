@@ -1,5 +1,5 @@
 import Aurelia from 'aurelia';
-import { RouterConfiguration } from '@aurelia/router';
+import { RouterConfiguration } from '@aurelia/router-lite';
 import { StandardConfiguration } from '@aurelia/runtime-html';
 
 import 'mdb-ui-kit';
@@ -19,12 +19,9 @@ void Aurelia.register(
   }),
   RouterConfiguration.customize({
     useUrlFragmentHash: false,
-    useDirectRouting: true,
     useHref: false,
     basePath: '/',
-    title: {
-      appTitle: '${componentTitles}${appTitleSeparator}DevSquad',
-    },
+    // buildTitle: (t) => t. + 'DevSquad',
   }),
 )
   .register(pages, elements)

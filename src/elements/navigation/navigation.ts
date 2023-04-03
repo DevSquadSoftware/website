@@ -1,5 +1,5 @@
-import { customElement, ICustomElementViewModel } from 'aurelia';
-import { IRouter } from '@aurelia/router';
+import { customElement, ICustomElementViewModel, IPlatform } from 'aurelia';
+import { IRouterEvents } from '@aurelia/router-lite';
 
 import './navigation.scss';
 
@@ -7,14 +7,13 @@ import template from 'bundle-text:./navigation.html';
 import Navbar from 'mdb-ui-kit/src/mdb/js/pro/navbar';
 @customElement({ name: 'navigation', template })
 export class Navigation implements ICustomElementViewModel {
-  nav: HTMLElement;
-  constructor(@IRouter private readonly router: IRouter) {
-    // you can inject the element or any DI in the constructor
-  }
+  nav?: HTMLElement;
+  route?: string;
 
-  get route() {
-    if (!this.router.activeNavigation) return '';
-    return this.router.activeNavigation.path;
+  constructor(@IPlatform private readonly platform: IPlatform, @IRouterEvents private readonly routerEvents: IRouterEvents) {
+    this.routerEvents.subscribe('au:router:navigation-end', (x) => {
+      this.route = this.platform.location.pathname;
+    });
   }
 
   get classes() {

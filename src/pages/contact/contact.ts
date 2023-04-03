@@ -15,11 +15,12 @@ export class ContactUs implements ICustomElementViewModel {
   async handleSubmit(event: SubmitEvent) {
     const myForm = event.target as HTMLFormElement;
     const formData = new FormData(myForm) as unknown;
+    console.log(new URLSearchParams(formData as [string,string][]).toString())
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData as [string,string][]).toString(),
     })
       .then(() => alert("Thank you for your submission"))
-      .catch((error) => alert(error));
+      
 }

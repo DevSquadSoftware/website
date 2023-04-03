@@ -5,4 +5,5 @@ export { ContactUs } from './contact/contact';
 export { Home } from './home/home';
 export { Portfolio } from './portfolio/portfolio';
 export { Services } from './services/services';
+export { Quote } from './quote/quote';
 export * from './not-found';
