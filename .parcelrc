@@ -3,6 +3,9 @@
   "transformers": {
     "*.ts": [
       "@parcel/transformer-typescript-tsc"
+    ],
+    "*.txt": [
+      "@parcel/transformer-raw"
     ]
   }
 }

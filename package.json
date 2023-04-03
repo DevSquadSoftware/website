@@ -21,6 +21,7 @@
     "@parcel/transformer-inline-string": "^2.8.3",
     "@parcel/transformer-sass": "^2.8.3",
     "@parcel/transformer-typescript-tsc": "^2.8.3",
+    "@parcel/reporter-bundle-analyzer": "^2.8.3",
     "@types/node": "^18.15.11",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.57.0",
@@ -45,7 +46,7 @@
     "lint:html": "htmlhint -c .htmlhintrc src",
     "lint": "npm run lint:js && npm run lint:html && npm run lint:css",
     "start": "parcel -p 9000",
-    "build": "parcel build --no-scope-hoist",
+    "build": "parcel build --no-scope-hoist --no-source-maps index.html --reporter @parcel/reporter-bundle-analyzer",
     "build:test": "parcel build --no-scope-hoist --no-source-maps test/all-spec.ts"
   },
   "source": "index.html",
