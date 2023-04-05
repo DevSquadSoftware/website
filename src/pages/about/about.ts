@@ -1,11 +1,13 @@
 import { customElement, ICustomElementViewModel } from 'aurelia';
+import { IRouteContext, route } from '@aurelia/router-lite';
 
 import './about.scss';
 
 import template from 'bundle-text:./about.html';
 @customElement({ name: 'about', template })
+@route({
+  path: ['about', 'about/:id'],
+})
 export class About implements ICustomElementViewModel {
-  constructor() {
-    // you can inject the element or any DI in the constructor
-  }
+  constructor(@IRouteContext private readonly context: IRouteContext) {}
 }
